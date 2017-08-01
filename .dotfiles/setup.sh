@@ -26,3 +26,15 @@ dotfiles config status.showUntrackedFiles no
 
 # Add profiles to the user's environment
 echo "for f in ~/.profiles/*; do source \$f; done" >> ~/.bash_profile
+
+# Now add the profiles to the current environment
+for f in ~/.profiles/*; do source $f; done
+
+# Install vim Vundles
+vim +PluginInstall +qall
+
+# Complete YouCompleteMe setup
+# This will probably only work on Linux and macOS
+pushd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+popd
