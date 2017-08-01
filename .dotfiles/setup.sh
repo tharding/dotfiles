@@ -2,6 +2,13 @@
 
 git clone --bare https://github.com/tharding/dotfiles.git $HOME/.cfg
 
+EXIT_CODE = $?
+
+if [ $EXIT_CODE -ne 0 ]
+then
+    exit $EXIT_CODE
+fi
+
 function dotfiles {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
