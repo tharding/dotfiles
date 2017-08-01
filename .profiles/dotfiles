@@ -1,0 +1,9 @@
+# Create alias for dotfiles git setup
+#
+# Add the following to your .bash_profile to include this an the other
+# bash profile scripts into your environment
+#
+# # Import bash profile files from dotfiles repository
+# for f in ~/.profiles/*; do source $f; done
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
