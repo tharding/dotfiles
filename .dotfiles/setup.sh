@@ -2,7 +2,7 @@
 
 git clone --bare https://github.com/tharding/dotfiles.git $HOME/.cfg
 
-EXIT_CODE = $?
+EXIT_CODE=$?
 
 if [ $EXIT_CODE -ne 0 ]
 then
