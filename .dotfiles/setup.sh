@@ -30,6 +30,9 @@ echo "for f in ~/.profiles/*; do source \$f; done" >> ~/.bash_profile
 # Now add the profiles to the current environment
 for f in ~/.profiles/*; do source $f; done
 
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # Install vim Vundles
 vim +PluginInstall +qall
 
